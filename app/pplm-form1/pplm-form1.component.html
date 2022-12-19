@@ -1,0 +1,250 @@
+<div class="container mt-4">
+    <form [formGroup]="submittedForm">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card shadow">
+                    <div class="row mt-4 mb-2">
+                        <div class="col-3"></div>
+                        <div class="col-3 ml-3">
+                            <label for="counterPartyName">Counter Party </label>
+                        </div>
+                        <div class="col-1">:</div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" id="counterPartyName"
+                                formControlName="counterPartyName">
+                            <div *ngIf="submitted && f['counterPartyName'].errors?.['required']" style="color:red ;">
+                                Required
+                            </div>
+                            <!-- <select class="form-control" id="counterPartyId" formControlName="counterPartyId">
+                                <option *ngFor="let object of countArr">{{object.counterParty}}</option>
+                            </select> -->
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row mt-3 mb-5 ml-2">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <div class="card card shadow">
+                                <div formGroupName="ref">
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Reference 1</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" id="reference_1"
+                                                formControlName="reference_1">
+                                            <div *ngIf="submitted && submittedForm.get('ref')?.get('reference_1')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Reference 2</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" id="reference_2"
+                                                formControlName="reference_2">
+                                            <div *ngIf="submitted && submittedForm.get('ref')?.get('reference_2')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Reference 3</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" id="reference_3"
+                                                formControlName="reference_3">
+                                            <div *ngIf="submitted && submittedForm.get('ref')?.get('reference_3')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <label for="">Maturity Date</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="date" class="form-control" id="maturity_date"
+                                            formControlName="maturity_date">
+                                        <div *ngIf="submitted && f['maturity_date'].errors?.['required']"
+                                            style="color:red ;">
+                                            Required
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <label for="">Currency</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" id="currency"
+                                            formControlName="currency">
+                                        <div *ngIf="submitted && f['currency'].errors?.['required']"
+                                            style="color:red ;">
+                                            Required
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <label for="">Amount</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" id="amount" formControlName="amount">
+                                        <div *ngIf="submitted && f['amount'].errors?.['required']" style="color:red ;">
+                                            Required
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-5">
+                            <div class="card card shadow">
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+
+                                        <label for="">Deal Type</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <select class="form-control" id="dealId" formControlName="dealId">
+                                            <option value="export">EXPORT</option>
+                                            <option value="import">IMPORT</option>
+
+                                        </select>
+                                        <div *ngIf="submitted && f['dealId'].errors?.['required']" style="color:red ;">
+                                            Required
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div formGroupName="deal">
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Deal Date</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="date" class="form-control" id="dealDate"
+                                                formControlName="dealDate">
+                                            <div *ngIf="submitted && submittedForm.get('deal')?.get('dealDate')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">PP or SE</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="ppOrSE" formControlName="ppOrSE">
+                                                <option value="pp">PP</option>
+                                                <option value="se">SE</option>
+                                            </select>
+                                            <div *ngIf="submitted && submittedForm.get('deal')?.get('ppOrSE')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Activity</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="activity" formControlName="activity">
+                                                <option value="new">NEW</option>
+                                                <option value="cnl ">CNL</option>
+                                                <option value="utl">UTL</option>
+                                            </select>
+                                            <div *ngIf="submitted && submittedForm.get('deal')?.get('activity')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Deal Source</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="deal_source" formControlName="deal_source">
+                                                <option value="ltfx">LTFX</option>
+                                                <option value="murex">MUREX</option>
+                                                <option value="hybrid">HYBRID</option>
+                                                <option value="treats">TREATS</option>
+                                                <option value="fii">FII </option>
+                                            </select>
+                                            <div *ngIf="submitted && submittedForm.get('deal')?.get('deal_source')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <label for="">Cancellation Date</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="date" class="form-control" id="cancellation_date"
+                                            formControlName="cancellation_date">
+                                        <div *ngIf="submitted && f['cancellation_date'].errors?.['required']"
+                                            style="color:red ;">
+                                            Required
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <div class="text-center">
+                                <button class="btn btn-success" (click)="Onsubmit()">{{buttonText}}</button>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="text-center">
+                                <button class="btn btn-danger" (click)="reset()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

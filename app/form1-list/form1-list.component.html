@@ -1,0 +1,123 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2 style="color:azure;">Counter Party</h2>
+        <div class="d-flex">
+            <button routerLink="/pplm-form" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-success">Add
+            </button>
+            <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+        </div>
+    </div>
+    <!-- <nav class="navbar">
+    <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()" placeholder="search">
+</nav> -->
+</nav>
+
+<!-- 
+<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success" type="submit"></button> -->
+
+<!-- <div class="form-group">
+    <input type="text" class="form-control" placeholder="Type to search" [(ngModel)]="data">
+  </div> -->
+<div class="row">
+    <div class="col-12">
+        <div class="card card shadow">
+
+            <div class="row">
+                <div class="col-3 mt-4 mb-2 ml-5">
+                    <button  (click)="getDownloadExcel()" class="btn btn-outline-info btn-md"><i class="fa fa-file-excel-o"
+                            style="font-size:20px;color: rgb(51, 219, 51);"></i>Excel</button>
+                </div>
+                <div class="col-2 mt-4 mb-2">
+                    <button  class="btn btn-outline-info btn-md"><i class="fa fa-file-pdf-o"
+                            style="font-size:20px;color: red;"></i>PDF</button>
+                        
+                </div>
+            </div>
+            <table class="table mt-3" id="tableId'">
+                <thead>
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">Counter Party</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Currency</th>
+                        <th scope="col">Cancellation Date</th>
+                        <th scope="col">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let object of counterArray;let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{object.counterPartyName}}</td>
+                        <td>{{object.amount}}</td>
+                        <td>{{object.currency}}</td>
+                        <td>{{object.cancellation_date}}</td>
+                        <td>
+                            <button style="color: aliceblue;" routerLink="/pplm-form/{{object.counterPartyId}}"
+                                type="button" class="btn btn-info">Edit</button>
+                            <button class="btn btn-danger mx-3"(click)="delete(object.counterPartyId)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>            <div class="modal-body">
+                <form [formGroup]="formValue">
+
+
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" id="firstName"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" id="lastName">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email ID</label>
+                        <input type="text" formControlName="email" class="form-control" id="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Mobile no</label>
+                        <input type="text" formControlName="mobile" class="form-control" id="mobile"
+                            [pattern]="'[789][0-9]{9}'" minlength="10" maxlength="10" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Salary</label>
+                        <input type="text" formControlName="salary" class="form-control" id="salary">
+                    </div>
+
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" *ngIf="showAdd" (click)="postEmployeeDetails()"
+                    class="btn btn-primary">Add</button>
+                <button type="button" *ngIf="showUpdate" (click)="UpdateEmployeeDetails()"
+                    class="btn btn-primary">Update</button>
+
+
+
+            </div>
+        </div>
+    </div>
+</div> -->

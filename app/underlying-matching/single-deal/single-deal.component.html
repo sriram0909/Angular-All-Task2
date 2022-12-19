@@ -1,0 +1,315 @@
+<!-- <h3>Underlying Matching (single deal)</h3> -->
+<div class="container mt-10">
+    <form >
+        
+        <div class="row">
+            
+            <div class="col-12">
+                <div class="card card shadow">
+                    <div class="row mt-4 mb-2">
+                        <h3 class="text-center"  style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,color;"  >Underlying Matching</h3>
+
+                        <div class="row mt-4 mb-2">                            
+                            <div class="col-1"></div>
+                            <div class="col-5">
+                                <label for="">Counter Party</label>
+                            </div>
+                            <div class="col-5">
+                                <select class="form-control" id="counterParty" formControlName="counterParty">
+                                    <option value="">-select-</option>
+                                    <option value=""></option>
+                                </select>
+                                <!-- <div *ngIf="submitted && f['counterPartyName'].errors?.['required']" style="color:red ;">
+                                    Required
+                                </div> -->
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+
+
+
+                    <div class="row mt-3 mb-5 ml-2">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <div class="card card shadow">
+                                <div formGroupName="ref">
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Contract Form</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="date" class="form-control" id="maturity_date"
+                                                formControlName="maturity_date">
+                                            <!-- <div *ngIf="submitted && f['maturity_date'].errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div> -->
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+
+
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Total Amount</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" id="reference_2"
+                                                formControlName="reference_2">
+
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Document Name</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="ppOrSE" formControlName="ppOrSE">
+                                                <option value="">-select-</option>
+                                                <option value=""></option>
+                                            </select>
+                                            <!-- <div *ngIf="submitted && submittedForm.get('deal')?.get('ppOrSE')?.errors?.['required']"
+                                                style="color:red ;">
+                                                Required
+                                            </div> -->
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Deal Type</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="ppOrSE" formControlName="ppOrSE">
+                                                <option value="">-select-</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card card shadow mt-3">
+                                                <div class="text-center mt-3">
+                                                    <h5>Upload Document</h5>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-2"></div>
+                                                    <div class="col-8">
+                                                        <div class="card cadr shadow mt-4 ml-4 mb-4">
+                                                            <div class="card-body">
+                                                                <div class="row mt-0">
+                                                                    <div class="col-4 ">
+                                                                        <label>File Name</label>
+                                                                    </div>
+                                                                    <div class="col-0">
+                                                                        <input type="file" class="form-control"
+                                                                            formControlName="file">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="row">
+                                                            <div class="col-3"></div>
+                                                            <div class="text-center  ml-5">
+                                                                <button
+                                                                    class="btn btn-success mt-4 mt-3 ">UPload</button>
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="col-5">
+                            <div class="card card shadow">
+                                <div class="row mt-4 mb-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-5">
+                                        <label for="">Contract To</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="date" class="form-control" id="maturity_date"
+                                            formControlName="maturity_date">
+                                        <!-- <div *ngIf="submitted && f['maturity_date'].errors?.['required']"
+                                            style="color:red ;">
+                                            Required
+                                        </div> -->
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div formGroupName="deal">
+
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Base Currency</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="ppOrSE" formControlName="ppOrSE">
+                                                <option value="">-select-</option>
+                                                <option value=""></option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Classification</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <select class="form-control" id="ppOrSE" formControlName="ppOrSE">
+                                                <option value="">-select-</option>
+                                                <option value=""></option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Underlying Reference Number</label>
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" id="reference_2"
+                                                formControlName="reference_2">
+
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+
+
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">Deal Source</label>
+                                        </div>
+                                        <div class="col-5">
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    LTFX
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    TREATS
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    RXC
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    MUREX
+                                                </label>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+                                  
+
+                                    <div class="row mt-4 mb-2">
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <label for="">MSA</label>
+                                        </div>
+
+                                        <div class="col-5">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-1"></div>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <div class="text-center">
+                                <button class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="text-center">
+                                <button class="btn btn-danger">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

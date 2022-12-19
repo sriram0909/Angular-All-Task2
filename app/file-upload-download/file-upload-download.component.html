@@ -1,0 +1,86 @@
+<div class="cointainer">
+    <form [formGroup]="fileForm">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card shadow mt-3">
+                    <div class="text-center mt-3">
+                        <h5>File UPload and Downlad</h5>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="card cadr shadow mt-4 ml-4 mb-4">
+                                <div class="card-body">
+                                    <div class="row mt-3">
+                                        <div class="col-4 ">
+                                            <label>File Name</label>
+                                        </div>
+                                        <div class="col-8">
+                                            <input type="file" (change)="onChange($event)" class="form-control" formControlName="file">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="text-center  ml-5">
+                                    <button class="btn btn-success mt-4 mt-3 " (click)="onUpload()">UPload</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="conatiner mt-3 ml-5 mr-5">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 ">
+            <div class="text-center">
+                <h5>File-List</h5>
+            </div>
+            <div class="card card shadow">
+                <div class="row">
+                    <!-- <div class="col-3 mt-4 mb-2 ml-5">
+                            <button class="btn btn-outline-info btn-md"><i class="fa fa-file-excel-o"
+                                    style="font-size:20px;color: rgb(51, 219, 51);"></i>Excel Download</button>
+                        </div>
+                        <div class="col-2 mt-4 mb-2">
+                            <button class="btn btn-outline-info btn-md"><i class="fa fa-file-pdf-o"
+                                    style="font-size:20px;color: red;"></i>PDF
+                                Download</button>
+                        </div> -->
+                    <div class="col-3"></div>
+                    <!-- <div class="col-2 mt-4 mb-2">
+                        <button class="btn btn-outline-success btn-md" routerLink="/counterParty"><i class="fa fa-plus"
+                                style="font-size:18px;color: rgb(93, 43, 209);"></i>Add</button>
+                    </div> -->
+                </div>
+                <div class="card card shadow">
+                    <table class="table table-bordered table-striped ">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>File Name</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let obj of fileArr;let i=index">
+                                <td>{{i+1}}</td>
+                                <td>{{obj.fileName}}</td>
+                                <td><a href="" (click)="downloadFile(i)">Download</a></td>
+
+                                <!-- <td><a href="" (click)="downloadMyFile(i)">Download</a></td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
